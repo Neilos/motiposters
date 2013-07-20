@@ -12,4 +12,8 @@ If your postgreSQL database has a username and password, add the following envir
 * 'PG_PASS' - containing you PostgreSQL password
 If you do not have a username and password you do not need to set up these environment variables.
 
-Run the test suite by entering 'rspec' in the command line.
+The project uses paperclip which requires the installation of imagemagick (http://www.imagemagick.org/script/index.php). If using Mac OSX and homebrew install with the following command
+brew install ImageMagick
+
+Run the test suite in the command line by entering
+rspec
