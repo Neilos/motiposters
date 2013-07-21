@@ -27,15 +27,8 @@ Motiposters::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_credentials => {
-      :bucket => 'motiposter',
-      #:s3_permissions => 'authenticated_read',
-      :access_key_id => ENV["S3_MOTIPOSTER_SECRET_KEY_ID"],
-      :secret_access_key => ENV["S3_MOTIPOSTER_SECRET_ACCESS_KEY"]
-    }
-  }
+  # paperclip url configuration, to place images in the public directory in the images directory...etc...
+  config.paperclip_defaults = {:url => '/images/:class/:attachment/:id_partition/:style/:filename'}
 
 #EITHER
   # config.action_mailer.delivery_method = :test

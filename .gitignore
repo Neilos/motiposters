@@ -15,3 +15,6 @@ config/database.yml
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore any images uploaded in development via paperclip
+public/images/products/

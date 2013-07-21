@@ -35,4 +35,11 @@ Motiposters::Application.configure do
   config.active_support.deprecation = :stderr
 
   config.action_mailer.default_url_options = {host: "localhost:3000"}
+
+  # paperclip url configuration for test is 
+  # to place images in the public directory and just use the default_image.png stored there
+  config.paperclip_defaults = {
+    :url => '/images/default_image.png'
+  }
+
 end

@@ -79,6 +79,9 @@ Motiposters::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.paperclip_defaults = {
+    :command_path => "/usr/bin",
+    :url => ':s3_domain_url',
+    :path => '/:class/:attachment/:id_partition/:style/:filename',
     :storage => :s3,
     :s3_credentials => {
       :bucket => 'motiposter',
